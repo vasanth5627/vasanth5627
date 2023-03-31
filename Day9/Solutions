@@ -1,0 +1,52 @@
+
+  b) Explain the difference between event bubbling and event capturing. Give an example scenario where event bubbling would occur and another example where event capturing would occur.
+
+
+Event bubbling and event capturing are two different ways of handling events in the DOM (Document Object Model) tree.
+
+In event bubbling, when an event is triggered on an element, the event first fires on that element, then on its parent element, then its parent's parent element, and so on, all the way up to the document object. This is the default behavior in the DOM.
+
+In event capturing, on the other hand, the event is first fired on the document object and then moves down the DOM tree to the element that triggered the event.
+
+Here's an example scenario where event bubbling would occur:
+
+Let's say you have an HTML page with a <div> element inside a <section> element inside a <main> element. If you add a click event listener to the <div> element and then click on it, the event will first fire on the <div> element, then on the <section> element, then on the <main> element, and finally on the document object. This is event bubbling.
+
+Here's an example scenario where event capturing would occur:
+
+Imagine you have an HTML page with a <button> element inside a <form> element inside a <section> element inside a <main> element. If you add a click event listener to the <button> element and then click on it, the event will first fire on the document object, then on the <main> element, then on the <section> element, then on the <form> element, and finally on the <button> element. This is event capturing.
+
+In practice, both event bubbling and event capturing can be used to handle events in the DOM tree, depending on the situation and the desired behavior. You can use the addEventListener method with the capture option to enable event capturing, or without it to use the default behavior of event bubbling.
+
+
+
+
+Explain the concept of event propagation and how it works. Give an example scenario where event propagation could be used to simplify code
+
+Event propagation is the process by which an event is propagated or passed through the nested elements in the DOM (Document Object Model) tree from the innermost element where the event occurred to the outermost element.
+
+There are two types of event propagation: event bubbling and event capturing. Event bubbling is the most common type of event propagation and is used by default in the DOM. In event bubbling, the event is first handled by the innermost element where the event occurred and then propagated to the outer elements. Event capturing, on the other hand, works in the opposite direction, where the event is first handled by the outermost element and then propagated to the innermost element.
+
+The process of event propagation allows us to handle events on parent elements rather than handling them individually on each child element. This makes it easier to write more concise and maintainable code. When an event is triggered on an element, the event is automatically propagated up the DOM tree until it reaches the topmost element in the hierarchy, which is usually the document object. During this process, each element that the event passes through has the opportunity to handle the event or pass it on to its parent element.
+
+For example, let's say you have a list of items in an HTML document and you want to add a click event listener to each item in the list. Instead of adding a separate event listener to each item, you can add a single event listener to the parent element that contains the list, such as an unordered list (<ul>) or a div (<div>), and use event propagation to handle the click events on each child element.
+
+
+<ul id="myList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+
+const myList = document.getElementById('myList');
+
+myList.addEventListener('click', function(event) {
+  if (event.target.tagName === 'LI') {
+    console.log(`Clicked on ${event.target.textContent}`);
+  }
+});
+
+In this example, we add a click event listener to the <ul> element that contains the list of items. When the user clicks on one of the items, the event bubbles up to the <ul> element, which then handles the event and logs a message to the console indicating which item was clicked.
+
+By using event propagation in this way, we only need to add a single event listener to the parent element, rather than adding a separate event listener to each child element, which simplifies the code and makes it more maintainable.
