@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @vasanth
-- 👀 I’m interested in Problem Solving
-- 🌱 I’m currently learning HTML,CSS,JS,JAVA,DSA,BOOOTSTRAP,SQL
+- 👀 I have 2+ yr Experience in Application Development
+- 🌱 My core skills include Java(JSE), Spring MVC, DSA, HTML, CSS, JavaScript, BOOOTSTRAP,SQL
 - 💞️ I’m looking to collaborate on Full-Stack Development
 - 📫 How to reach me chicvasanth@gmail.com
 
