@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @vasanth
-- 👀 I have 2+ yr Experience in Application Development
-- 🌱 My core skills include Core-Java, Spring Boot, Hibernate, SQL, API, DSA, HTML, CSS, JavaScript, BOOOTSTRA.
+- 👀 I have 2+ yr Experience as Java Developer
+- 🌱 My core skills include Core-Java,OOP, System Design, Spring Boot, Hibernate, SQL, REST-API, DSA, HTML, CSS, JavaScript, BOOOTSTRAP.
 - 💞️ I’m looking to collaborate on Full-Stack Development
 - 📫 How to reach me chicvasanth@gmail.com
 
